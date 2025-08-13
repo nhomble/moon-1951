@@ -1,0 +1,24 @@
+{
+  "name": "app-1",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "UNLICENSED",
+  "dependencies": {
+    "lib-1": "workspace:^"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./src/*.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "types": "./typings/src/index.d.ts"
+}

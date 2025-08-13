@@ -1,0 +1,41 @@
+{
+  "extends": "./tsconfig.options.json",
+  "files": [],
+  "references": [
+    {
+      "path": "apps"
+    },
+    {
+      "path": "apps/app-1"
+    },
+    {
+      "path": "apps/app-2"
+    },
+    {
+      "path": "apps/example-app"
+    },
+    {
+      "path": "generated/example-codegen"
+    },
+    {
+      "path": "libs"
+    },
+    {
+      "path": "libs/example-lib"
+    },
+    {
+      "path": "libs/lib-1"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "example-lib/": [
+        "libs/example-lib/src/*"
+      ],
+      "example-lib/*": [
+        "libs/example-lib/src/*"
+      ]
+    }
+  }
+}

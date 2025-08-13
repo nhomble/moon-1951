@@ -1,0 +1,58 @@
+▪▪▪▪ Gathering touched files
+  .moon/cache/hashes/734afa3b059c163d7ff012a422839e407793a3a7201ba6d4dd13099517308716.json
+  .moon/cache/states/partialProjectGraph.json
+  .moon/cache/states/projects.json
+  .moon/workspace.yml
+  apps/app-2/src/index.ts
+  issue-simulation-20250812-150442.log
+  issue-simulation-20250812-151030.log
+  issue-simulation-20250812-151104.log
+  libs/lib-1/src/index.ts
+  simulate-issue.sh
+▪▪▪▪ Gathering potential targets
+  app-1:build
+  app-1:format
+  app-1:format-write
+  app-1:run
+  app-1:test
+  app-1:typecheck
+  app-2:build
+  app-2:format
+  app-2:format-write
+  app-2:run
+  app-2:test
+  app-2:typecheck
+  lib-1:build
+  lib-1:format
+  lib-1:format-write
+  lib-1:test
+  lib-1:typecheck
+▪▪▪▪ Generating action graph
+Target count: 17
+Action count: 20
+▪▪▪▪ Running targets
+[ WARN 2025-08-12 16:10:28.056] moon_task_hasher::task_hasher  Attempted to hash input apps/app-1/node_modules/lib-1 but only files can be hashed, try using a glob instead 
+[ WARN 16:10:28.086] moon_task_hasher::task_hasher  Attempted to hash input prettier.config.js but it does not exist, skipping 
+[ WARN 16:10:28.086] moon_task_hasher::task_hasher  Attempted to hash input apps/app-2/node_modules/lib-1 but only files can be hashed, try using a glob instead 
+[ WARN 16:10:28.086] moon_task_hasher::task_hasher  Attempted to hash input .prettierignore but it does not exist, skipping 
+    lib-1:build | Successfully compiled: 1 file with swc (31.21ms)
+▪▪▪▪ lib-1:build (cached, 1f8f6f7a)
+▪▪▪▪ app-1:run (35a7d1bb)
+▪▪▪▪ app-2:format (5ff2d945)
+▪▪▪▪ app-1:run (185ms, 35a7d1bb)
+▪▪▪▪ lib-1:typecheck (8da34ba8)
+   app-2:format | Checking formatting...
+      app-1:run | node:internal/modules/cjs/loader:1148
+      app-1:run |   throw err;
+      app-1:run |   ^
+
+      app-1:run | Error: Cannot find module '/Users/nicolas/dev/moon/repro/apps/app-1/build/src/main.js'
+      app-1:run |     at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)
+      app-1:run |     at Module._load (node:internal/modules/cjs/loader:986:27)
+      app-1:run |     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:174:12)
+      app-1:run |     at node:internal/main/run_main_module:28:49 {
+      app-1:run |   code: 'MODULE_NOT_FOUND',
+      app-1:run |   requireStack: []
+      app-1:run | }
+
+      app-1:run | Node.js v20.13.1

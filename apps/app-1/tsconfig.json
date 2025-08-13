@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.options.json",
+  "include": [
+    "src/**/*.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/apps/app-1",
+    "paths": {
+      "lib-1": [
+        "../../libs/lib-1/src/index.ts"
+      ],
+      "lib-1/*": [
+        "../../libs/lib-1/src/*"
+      ]
+    }
+  },
+  "references": [
+    {
+      "path": "../../libs/lib-1"
+    }
+  ]
+}

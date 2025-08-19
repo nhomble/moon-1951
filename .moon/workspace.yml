@@ -13,7 +13,6 @@ $schema: 'https://moonrepo.dev/schemas/workspace.json'
 # and cannot reference projects located outside the workspace boundary.
 projects:
   - 'apps/**/moon.yml'
-  - 'generated/**/moon.yml'
   - 'libs/**/moon.yml'
 
 # VCS configuration

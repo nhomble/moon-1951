@@ -1,8 +1,5 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/tasks.json
 
-implicitDeps:
-  - '^:build'
-
 implicitInputs:
   - 'package.json'
 
@@ -37,4 +34,5 @@ tasks:
       - 'src/**/*'
       - 'tsconfig.json'
     deps:
+      - '^:typecheck'
       - '^:build'

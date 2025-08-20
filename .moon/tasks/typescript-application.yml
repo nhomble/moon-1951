@@ -1,6 +1,8 @@
 # yaml-language-server: $schema=https://moonrepo.dev/schemas/tasks.json
 tasks:
   build:
+    options:
+      runInCI: true
     command: "swc src --source-maps --out-dir build"
     inputs:
       - "src/**/*"

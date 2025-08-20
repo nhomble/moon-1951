@@ -26,8 +26,6 @@ fileGroups:
 tasks:
   # https://moonrepo.dev/docs/guides/examples/typescript
   typecheck:
-    options:
-      runInCI: true
     command:
       - 'tsc'
       - '--build'

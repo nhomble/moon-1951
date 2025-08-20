@@ -8,11 +8,3 @@ tasks:
       - "build"
     deps:
       - "^:build"
-  run:
-    command:
-      - 'node'
-      - 'build/src/main.js'
-    inputs:
-      - 'src/**/*'
-    deps:
-      - '^:build'
